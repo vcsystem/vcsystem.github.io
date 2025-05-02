@@ -128,6 +128,15 @@
 </div>
 
 <script>
+    window.onload = () => {
+        themeSwitch.checked = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (themeSwitch.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    }
+
     const themeSwitch = document.getElementById('themeSwitch');
 
     themeSwitch.addEventListener('change', function () {
