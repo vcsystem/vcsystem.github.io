@@ -5,8 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>VCSystem</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/196595133?v=4&size=64">
     <style>
+        body {
+            background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
+            color: var(--text-color);
+            transition: all 0.5s ease;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+        }
+
         :root {
             --background-color: #ffffff;
             --gradient-color-1: #fbc2eb;
@@ -25,25 +41,14 @@
             --slider-active-bg: #1E90FF;
         }
 
-        body {
-            background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
-            color: var(--text-color);
-            transition: all 0.5s ease;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            overflow: hidden;
-        }
-
         h1 {
             font-size: 2.5em;
             text-align: center;
             animation: fadeIn 1.5s ease-out;
+        }
+
+        h1:hover {
+            transform: scale(1.05);
         }
 
         @keyframes fadeIn {
@@ -56,6 +61,7 @@
                 transform: translateY(0);
             }
         }
+
 
         .theme-switch {
             position: absolute;
@@ -110,7 +116,6 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
-
     </style>
 </head>
 <body>
